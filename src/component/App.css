@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
 }
-/* Heading main container */
+/* - - - - - - - - - - - - - - - - - - - HEADING CONTAINER - - - - - - - - - - - - - - - - - - -  */
+
 .heading-container {
   background-color: #f4f6f8;
   display: flex;
@@ -42,27 +43,26 @@ li:hover {
   cursor: pointer;
 }
 
-/* NOW BODY SECTION */
-
+/* - - - - - - - - - - - - - - - - - - - BODY SECTION - - - - - - - - - - - - - - - - - - -  */
 .body-container {
   background-color: red;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* HOME CONTAINER */
+/* - - - - - - - - - - - - - - - - - - - Home Container - - - - - - - - - - - - - - - - - - -  */
 .home-container {
   background-color: pink;
   display: flex;
-  height: 100vh;
   margin: 0px;
-  background-image: url('https://demo.templateflip.com/super/images/wave-bg.svg');
-  object-fit: fill;
 }
 .pic-container {
   width: 50%;
   height: 75vh;
   padding: 25px;
   background-color: #f4f6f8;
+  box-sizing: border-box;
 }
 .picSize {
   height: 100%;
@@ -76,6 +76,7 @@ li:hover {
   align-content: space-between;
   background-color: #f4f6f8;
   padding: 25px;
+  box-sizing: border-box;
 }
 
 /* TEXT SIZES */
@@ -104,6 +105,36 @@ li:hover {
   border: 1px solid yellow;
   background-color: yellow;
 }
+
+/* - - - - - - - - - - - - - - - - - - - About Container - - - - - - - - - - - - - - - - - - -  */
+.about-container {
+  background-color: blue;
+  display: flex;
+}
+.about-container-detail {
+  background-color: blueviolet;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.about-container-image {
+  height: 150px;
+  background-color: red;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.about-subject {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.about-person {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
 /* MEDIA QUERY */
 @media only screen and (max-width: 750px) {
   /* Heading main container */
@@ -143,11 +174,25 @@ li:hover {
   }
   .pic-container {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .sub-container {
     width: 100%;
     padding: 0px 0px 0px 40px;
     height: 500px;
+  }
+
+  /* NOW FOR ABOUT SECTION */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .about-container-detail {
+    width: 100vh;
+  }
+  .about-container-image {
+    width: 100vh;
   }
 }

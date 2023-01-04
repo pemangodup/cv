@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
+
 const App = () => {
   const [style, setStyle] = useState(true);
   const toggle = () => {
@@ -43,6 +44,7 @@ const App = () => {
         </div>
       </section>
       <section className="body-container">
+        {/* FIRST CONTAINER INSIDE BODY SECTION "HOME CONTAINER" */}
         <div className="home-container">
           <div className="pic-container">
             <img
@@ -66,6 +68,21 @@ const App = () => {
               Get In Touch <FontAwesomeIcon icon="fa-regular fa-arrow-right" />
             </button>
           </div>
+        </div>
+        {/* SECOND CONTAINER INSIDE BODY SECTION "ABOUT CONTAINER" */}
+        <div className="about-container">
+          <div className="about-container-detail">
+            <div className="about-subject">Hello! I am Pema Ngodup</div>
+            <div className="about-person">
+              I am passionate about UI/UX design and Web Design. I am a skilled
+              front-end developer and master of graphic design tools such as
+              Photoshop and Sketch. I am a quick learner and a team worker that
+              gets the job done. I can easily capitalize on low hanging fruits
+              and quickly maximize timely deliverables for real-time schemas.
+            </div>
+            <div className="about-details"></div>
+          </div>
+          <div className="about-container-image"></div>
         </div>
       </section>
       <section className="footer-container">I am footer.</section>
