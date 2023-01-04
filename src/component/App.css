@@ -1,0 +1,153 @@
+.main-container {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+/* Heading main container */
+.heading-container {
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px 0px;
+}
+/* top header inside heading container wher we have image and button */
+.top-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pro-img {
+  height: 60px;
+  border-radius: 60%;
+}
+.btnIcon {
+  display: none;
+}
+
+/* Bottom container inside heading container where we have list of menu items */
+ul {
+  background-color: #f4f6f8;
+  display: flex;
+  padding: 0px;
+}
+.li {
+  margin: 0px 10px;
+  list-style-type: none;
+  font-style: oblique;
+  font-size: 20px;
+  background-color: #f4f6f8;
+}
+
+li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/* NOW BODY SECTION */
+
+.body-container {
+  background-color: red;
+  margin: 0px;
+}
+
+/* HOME CONTAINER */
+.home-container {
+  background-color: pink;
+  display: flex;
+  height: 100vh;
+  margin: 0px;
+  background-image: url('https://demo.templateflip.com/super/images/wave-bg.svg');
+  object-fit: fill;
+}
+.pic-container {
+  width: 50%;
+  height: 75vh;
+  padding: 25px;
+  background-color: #f4f6f8;
+}
+.picSize {
+  height: 100%;
+  width: 100%;
+}
+.sub-container {
+  width: 50%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  background-color: #f4f6f8;
+  padding: 25px;
+}
+
+/* TEXT SIZES */
+.hello-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.name-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.profesion-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  margin: 20px 0px;
+}
+.icon {
+  margin: 20px 20px 20px 0px;
+}
+.btn {
+  height: 50px;
+  width: 160px;
+  border-radius: 20px;
+  border: 1px solid yellow;
+  background-color: yellow;
+}
+/* MEDIA QUERY */
+@media only screen and (max-width: 750px) {
+  /* Heading main container */
+  .heading-container {
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+  }
+  /* top section inside heading container wher we have image and button */
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btnIcon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+  }
+
+  /* Bottom container inside heading container where we have list of menu items */
+  ul {
+    background-color: #f4f6f8;
+    display: none;
+    flex-direction: column;
+  }
+  .li {
+    margin: 5px 0px;
+  }
+  ul.navactive {
+    display: flex;
+  }
+
+  /* NOW FOR HOME SECTION */
+  .home-container {
+    flex-direction: column;
+  }
+  .pic-container {
+    width: 100%;
+  }
+
+  .sub-container {
+    width: 100%;
+    padding: 0px 0px 0px 40px;
+    height: 500px;
+  }
+}
