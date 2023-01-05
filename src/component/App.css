@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
 }
+
 /* - - - - - - - - - - - - - - - - - - - HEADING CONTAINER - - - - - - - - - - - - - - - - - - -  */
 
 .heading-container {
@@ -37,11 +38,19 @@ ul {
   font-size: 20px;
   background-color: #f4f6f8;
 }
-
-li:hover {
+.li a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
   color: red;
   cursor: pointer;
 }
+
+/* li:hover {
+  color: red;
+  cursor: pointer;
+} */
 
 /* - - - - - - - - - - - - - - - - - - - BODY SECTION - - - - - - - - - - - - - - - - - - -  */
 .body-container {
@@ -59,7 +68,7 @@ li:hover {
 }
 .pic-container {
   width: 50%;
-  height: 75vh;
+  height: 82vh;
   padding: 25px;
   background-color: #f4f6f8;
   box-sizing: border-box;
@@ -70,7 +79,7 @@ li:hover {
 }
 .sub-container {
   width: 50%;
-  height: 75vh;
+  height: 82vh;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -112,14 +121,7 @@ li:hover {
   display: flex;
 }
 .about-container-detail {
-  background-color: blueviolet;
-  width: 50%;
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-.about-container-image {
-  height: 150px;
-  background-color: red;
+  background-color: #f4f6f8;
   width: 50%;
   padding: 20px 40px;
   box-sizing: border-box;
@@ -133,6 +135,27 @@ li:hover {
 .about-person {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+}
+.about-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.straight-line {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 5px 0px;
+}
+.about-image {
+  background-color: #f4f6f8;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.responsive-pic {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
 }
 
 /* MEDIA QUERY */
@@ -189,10 +212,18 @@ li:hover {
     flex-direction: column;
     align-content: space-between;
   }
-  .about-container-detail {
-    width: 100vh;
-  }
+  .about-container-detail,
   .about-container-image {
     width: 100vh;
+  }
+
+  .about-container-detail,
+  .about-image {
+    width: 100%;
+  }
+
+  .responsive-pic {
+    height: 80%;
+    width: 80%;
   }
 }
