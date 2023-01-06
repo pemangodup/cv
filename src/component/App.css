@@ -123,7 +123,7 @@ a:hover {
 .about-container-detail {
   background-color: #f4f6f8;
   width: 50%;
-  padding: 20px 40px;
+  padding: 20px 40px 0px 130px;
   box-sizing: border-box;
 }
 
@@ -149,7 +149,7 @@ a:hover {
 .about-image {
   background-color: #f4f6f8;
   width: 50%;
-  padding: 20px 40px;
+  padding: 20px 130px 20px 40px;
   box-sizing: border-box;
 }
 .responsive-pic {
@@ -158,6 +158,158 @@ a:hover {
   border-radius: 30px;
 }
 
+/*- - - - - - - - - - - - - - - - -Experience Container - - - - - - - -*/
+.experiences-container {
+  display: flex;
+  flex-direction: column;
+}
+.top-part-experiences {
+  display: flex;
+  background-color: #f4f6f8;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.bottom-part-experiences {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0px 130px;
+}
+.card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.card-upper {
+  background-color: pink;
+  height: 80px;
+  display: flex;
+}
+.left-side-card-upper {
+  background-color: #f4f6f8;
+  width: 60%;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+.sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.right-side-card-upper {
+  display: flex;
+  background-color: #f4f6f8;
+  width: 40%;
+  padding-top: 10px;
+  justify-content: center;
+}
+.icon-img {
+  height: 50%;
+  width: 50%;
+}
+.card-below {
+  background-color: white;
+  height: 150px;
+  padding: 20px 30px 0px 30px;
+}
+
+/* - - - - - - - - - - - - - - - - - CONTACT CONTAINER - - - - - -  - - - */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+}
+.upper-contact-container {
+  display: flex;
+  background-color: white;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.lower-contact-container {
+  background-color: white;
+  display: flex;
+  padding: 0px 130px;
+}
+.contact-form {
+  background-color: #f4f6f8;
+  width: 50%;
+  padding: 20px;
+  height: 500px;
+  margin-bottom: 100px;
+}
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 5px;
+}
+input {
+  margin: 15px 5px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  height: 35px;
+  width: 90%;
+}
+textarea {
+  margin: 15px 5px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  width: 90%;
+}
+
+.send-button {
+  height: 45px;
+  width: 100px;
+  margin: 20px 0px 0px 5px;
+  border-radius: 20px;
+  border: 0px;
+  background-color: yellow;
+  cursor: pointer;
+}
+.contact-detail {
+  background-color: white;
+  height: 500px;
+  width: 50%;
+  padding: 20px;
+}
+.contact-sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.contact-message {
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.contact-sub-detail {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.uta {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* - - - - - - - - - - - FOOTER CONTAINER - - - - - - - - - - - - */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0px;
+  gap: 10px;
+  background-color: #f4f6f8;
+}
+.footer-1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
 /* MEDIA QUERY */
 @media only screen and (max-width: 750px) {
   /* Heading main container */
@@ -215,6 +367,7 @@ a:hover {
   .about-container-detail,
   .about-container-image {
     width: 100vh;
+    padding: 20px 30px 0px 40px;
   }
 
   .about-container-detail,
@@ -225,5 +378,27 @@ a:hover {
   .responsive-pic {
     height: 80%;
     width: 80%;
+  }
+
+  /* bottome part experiences */
+  .bottom-part-experiences {
+    display: flex;
+    background-color: #f4f6f8;
+    flex-direction: column;
+    padding: 0px 30px;
+  }
+  /* Contact container */
+  .lower-contact-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+  }
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-detail {
+    width: 100%;
   }
 }

@@ -93,30 +93,35 @@ const App = () => {
             <div className="icons">
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pema-ngodup-529438130/"
               >
                 <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pema-ngodup-529438130/"
               >
                 <FontAwesomeIcon className="icon" icon={faTwitter} />
               </a>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pema-ngodup-529438130/"
               >
                 <FontAwesomeIcon className="icon" icon={faFacebook} />
               </a>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pema-ngodup-529438130/"
               >
                 <FontAwesomeIcon className="icon" icon={faInstagram} />
               </a>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pema-ngodup-529438130/"
               >
                 <FontAwesomeIcon className="icon" icon={faBehance} />
@@ -127,6 +132,7 @@ const App = () => {
             </button>
           </div>
         </div>
+        {/* end of home container */}
         {/* SECOND CONTAINER INSIDE BODY SECTION "ABOUT CONTAINER" */}
         <div className="about-container" id="about">
           <div className="about-container-detail">
@@ -157,8 +163,118 @@ const App = () => {
             />
           </div>
         </div>
+        {/* End of about container */}
+        {/* THIRD CONTAINER INSIDE BODY SECTION "EXPERIENCES CONTAINER" */}
+        <div className="experiences-container" id="experiences">
+          <div className="top-part-experiences">Experiences</div>
+          <div className="bottom-part-experiences">
+            {personDetails.map((h) => {
+              return (
+                <div className="card">
+                  <div className="card-upper">
+                    <div className="left-side-card-upper">
+                      <div className="sub">Web Design</div>
+                      <div className="company-date">
+                        Webbie LLC. (2018-2020)
+                      </div>
+                    </div>
+                    <div className="right-side-card-upper">
+                      <img
+                        className="icon-img"
+                        src="https://demo.templateflip.com/super/images/services/web-design.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="card-below">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Iusto a error nostrum quae aut aperiam repudiandae ea
+                    consectetur sed dolorem eius eligendi optio vitae porro
+                    omnis, quaerat impedit expedita doloribus?
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        {/* End of experience container */}
+        <div className="contact-container" id="contact">
+          <div className="upper-contact-container">Contact Me</div>
+          <div className="lower-contact-container">
+            <div className="contact-form">
+              <form action="" method="post">
+                <label htmlFor="">Name</label>
+                <br />
+                <input type="text" />
+                <br />
+                <label htmlFor="">Email</label>
+                <br />
+                <input type="email" />
+                <br />
+                <label htmlFor="">Message</label>
+                <br />
+                <textarea name="" id="" cols="30" rows="12"></textarea>
+                <button className="send-button">Send</button>
+              </form>
+            </div>
+            <div className="contact-detail">
+              <div className="contact-sub">Let's talk how I can help you!</div>
+              <div className="contact-message">
+                If you like my work and want to avail my services then drop me a
+                message using the contact form. Or get in touch using my email,
+                skype or my contact number. See you!
+              </div>
+              <div className="contact-sub-detail">
+                <div className="yeta">Email:</div>
+                <div className="uta">pngodup123@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section className="footer-container">I am footer.</section>
+      {/* End of body section */}
+      <section className="footer-container">
+        <div className="footer-1">Pema Ngodup</div>
+        <div className="footer-2">Node JS & React JS Developer</div>
+        <div className="footer-3">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+          >
+            <FontAwesomeIcon className="icon" icon={faLinkedin} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+          >
+            <FontAwesomeIcon className="icon" icon={faTwitter} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+          >
+            <FontAwesomeIcon className="icon" icon={faFacebook} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+          >
+            <FontAwesomeIcon className="icon" icon={faInstagram} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+          >
+            <FontAwesomeIcon className="icon" icon={faBehance} />
+          </a>
+        </div>
+        <div className="footer-4">&copy;Pema Ngoudp. All Rights Reserved</div>
+      </section>
     </div>
   );
 };
