@@ -12,63 +12,6 @@
   flex-direction: column;
 }
 
-/* - - - - - - - - - - - - - - - - - - - Home Container - - - - - - - - - - - - - - - - - - -  */
-.home-container {
-  background-color: pink;
-  display: flex;
-  margin: 0px;
-}
-.pic-container {
-  width: 50%;
-  height: 82vh;
-  padding: 25px 30px;
-  background-color: #f9f3ed;
-  box-sizing: border-box;
-}
-.picSize {
-  height: 100%;
-  width: 100%;
-}
-.sub-container {
-  width: 50%;
-  height: 82vh;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  background-color: #f9f3ed;
-  padding: 25px;
-  box-sizing: border-box;
-}
-
-/* TEXT SIZES */
-.hello-text {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 30px;
-  margin: 20px 0px;
-}
-.name-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  margin: 20px 0px;
-  font-weight: bold;
-}
-.profesion-text {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 30px;
-  margin: 20px 0px;
-}
-.icon {
-  margin: 20px 20px 20px 0px;
-}
-.btn {
-  height: 50px;
-  width: 160px;
-  border-radius: 20px;
-  border: 1px solid yellow;
-  background-color: yellow;
-  cursor: pointer;
-}
-
 /* - - - - - - - - - - - - - - - - - - - About Container - - - - - - - - - - - - - - - - - - -  */
 .about-container {
   background-color: blue;
