@@ -1,0 +1,79 @@
+/* - - - - - - - - - - - - - - - - - - - HEADING CONTAINER - - - - - - - - - - - - - - - - - - -  */
+
+.heading-container {
+  background-color: #f9f3ed;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px 0px;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0;
+}
+/* top header inside heading container wher we have image and button */
+.top-header {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pro-img {
+  height: 60px;
+  border-radius: 60%;
+}
+.btnIcon {
+  display: none;
+}
+
+/* Bottom container inside heading container where we have list of menu items */
+ul {
+  background-color: #f9f3ed;
+  display: flex;
+  padding: 0px;
+}
+.li {
+  margin: 0px 10px;
+  list-style-type: none;
+  font-style: oblique;
+  font-size: 20px;
+  background-color: #f9f3ed;
+}
+.li a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  /* Heading main container */
+  .heading-container {
+    background-color: #f9f3ed;
+    display: flex;
+    flex-direction: column;
+  }
+  /* top section inside heading container wher we have image and button */
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btnIcon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+  }
+
+  /* Bottom container inside heading container where we have list of menu items */
+  ul {
+    background-color: #f9f3ed;
+    display: none;
+    flex-direction: column;
+  }
+  .li {
+    margin: 5px 0px;
+  }
+  ul.navactive {
+    display: flex;
+  }
+}

@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import img from '../img/pema.jpg';
+import Heading from './heading/Heading';
 import {
   faTwitter,
   faFacebook,
@@ -10,11 +10,6 @@ import {
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
 const App = () => {
-  const [style, setStyle] = useState(true);
-  const toggle = () => {
-    setStyle(!style);
-  };
-
   const personDetails = [
     { h: 'Age', e: '28' },
     { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
@@ -25,43 +20,7 @@ const App = () => {
   ];
   return (
     <div className="main-container">
-      <section className="heading-container">
-        {/* This is my top container with image and button */}
-        <div className="top-header">
-          <a href="#home">
-            <img
-              className="pro-img"
-              src="https://media.licdn.com/dms/image/C5603AQHRv-dTiZ9xOA/profile-displayphoto-shrink_400_400/0/1625419846609?e=1678320000&v=beta&t=0mzdneY0jqO_lv2M3jAw7nZkooBEVj4iWzgju5iKlBw"
-              alt=""
-            />
-          </a>
-
-          <button className="btnIcon" onClick={toggle}>
-            |||
-          </button>
-        </div>
-        {/* this is my bottom container with list of menu items */}
-        <div className="bottom-header">
-          <ul className={style ? 'ul' : 'ul navactive'}>
-            <li className="li">
-              <a href="#about" className="li">
-                About
-              </a>
-            </li>
-
-            <li className="li">
-              <a href="#experience" className="li">
-                Experiences
-              </a>
-            </li>
-            <li className="li">
-              <a href="#contact" className="li">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Heading />
       <section className="body-container">
         {/* FIRST CONTAINER INSIDE BODY SECTION "HOME CONTAINER" */}
         <div className="home-container" id="home">
