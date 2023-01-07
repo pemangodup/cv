@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import img from '../img/pema.jpg';
 import {
   faTwitter,
   faFacebook,
@@ -8,7 +9,6 @@ import {
   faLinkedin,
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
-
 const App = () => {
   const [style, setStyle] = useState(true);
   const toggle = () => {
@@ -48,28 +48,14 @@ const App = () => {
                 About
               </a>
             </li>
+
             <li className="li">
-              <a href="#about" className="li">
-                Services
-              </a>
-            </li>
-            <li className="li">
-              <a href="#about" className="li">
-                Skills
-              </a>
-            </li>
-            <li className="li">
-              <a href="#about" className="li">
-                Portfolio
-              </a>
-            </li>
-            <li className="li">
-              <a href="#about" className="li">
+              <a href="#experience" className="li">
                 Experiences
               </a>
             </li>
             <li className="li">
-              <a href="#about" className="li">
+              <a href="#contact" className="li">
                 Contact
               </a>
             </li>
@@ -82,14 +68,16 @@ const App = () => {
           <div className="pic-container">
             <img
               className="picSize"
-              src="https://demo.templateflip.com/super/images/illustrations/hello3.svg"
+              src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif"
+              // src="https://media.istockphoto.com/id/1241710244/vector/working-at-home-vector-flat-style-illustration-online-career-coworking-space-illustration.jpg?s=612x612&w=0&k=20&c=U34U9zhLBWDEbfPmgmlnFJiP-EuWu7MEUCxUls_BnKU="
+              // src="https://demo.templateflip.com/super/images/illustrations/hello3.svg"
               alt=""
             />
           </div>
           <div className="sub-container">
             <div className="hello-text">Hello!</div>
             <div className="name-text">I,m Pema Ngodup</div>
-            <div className="profesion-text">Web Developer</div>
+            <div className="profesion-text">Node JS & React JS Developer</div>
             <div className="icons">
               <a
                 target="_blank"
@@ -158,14 +146,15 @@ const App = () => {
           <div className="about-image">
             <img
               className="responsive-pic"
-              src="https://media.licdn.com/dms/image/C5603AQHRv-dTiZ9xOA/profile-displayphoto-shrink_800_800/0/1625419846609?e=1678320000&v=beta&t=zwm8vLbwZgeuqHab66Cm6h75zXTug7Fyi08lHVFFs4E"
+              src={img}
+              // src="https://media.licdn.com/dms/image/C5603AQHRv-dTiZ9xOA/profile-displayphoto-shrink_800_800/0/1625419846609?e=1678320000&v=beta&t=zwm8vLbwZgeuqHab66Cm6h75zXTug7Fyi08lHVFFs4E"
               alt="profile.jpg"
             />
           </div>
         </div>
         {/* End of about container */}
         {/* THIRD CONTAINER INSIDE BODY SECTION "EXPERIENCES CONTAINER" */}
-        <div className="experiences-container" id="experiences">
+        <div className="experiences-container" id="experience">
           <div className="top-part-experiences">Experiences</div>
           <div className="bottom-part-experiences">
             {personDetails.map((h) => {
