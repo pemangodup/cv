@@ -1,8 +1,9 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import img from '../img/pema.jpg';
 import Heading from './heading/Heading';
 import Home from './heading/Home';
+import About from './heading/About';
+import Experience from './heading/Experience';
 import {
   faTwitter,
   faFacebook,
@@ -11,85 +12,13 @@ import {
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
 const App = () => {
-  const personDetails = [
-    { h: 'Age', e: '28' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
-    { h: 'Phone', e: '920090988' },
-    { h: 'Age', e: '28' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
-    { h: 'Phone', e: '920090988' },
-  ];
   return (
     <div className="main-container">
       <Heading />
       <section className="body-container">
         <Home />
-        {/* SECOND CONTAINER INSIDE BODY SECTION "ABOUT CONTAINER" */}
-        <div className="about-container" id="about">
-          <div className="about-container-detail">
-            <div className="about-subject">Hello! I am Pema Ngodup</div>
-            <div className="about-person">
-              I am passionate about UI/UX design and Web Design. I am a skilled
-              front-end developer and master of graphic design tools such as
-              Photoshop and Sketch. I am a quick learner and a team worker that
-              gets the job done. I can easily capitalize on low hanging fruits
-              and quickly maximize timely deliverables for real-time schemas.
-            </div>
-            <div className="about-details">
-              {personDetails.map((deta) => {
-                return (
-                  <div className="straight-line">
-                    <div className="label">{deta.h}:</div>
-                    <div className="detail">{deta.e}</div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="about-image">
-            <img
-              className="responsive-pic"
-              src={img}
-              // src="https://media.licdn.com/dms/image/C5603AQHRv-dTiZ9xOA/profile-displayphoto-shrink_800_800/0/1625419846609?e=1678320000&v=beta&t=zwm8vLbwZgeuqHab66Cm6h75zXTug7Fyi08lHVFFs4E"
-              alt="profile.jpg"
-            />
-          </div>
-        </div>
-        {/* End of about container */}
-        {/* THIRD CONTAINER INSIDE BODY SECTION "EXPERIENCES CONTAINER" */}
-        <div className="experiences-container" id="experience">
-          <div className="top-part-experiences">Experiences</div>
-          <div className="bottom-part-experiences">
-            {personDetails.map((h) => {
-              return (
-                <div className="card">
-                  <div className="card-upper">
-                    <div className="left-side-card-upper">
-                      <div className="sub">Web Design</div>
-                      <div className="company-date">
-                        Webbie LLC. (2018-2020)
-                      </div>
-                    </div>
-                    <div className="right-side-card-upper">
-                      <img
-                        className="icon-img"
-                        src="https://demo.templateflip.com/super/images/services/web-design.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="card-below">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Iusto a error nostrum quae aut aperiam repudiandae ea
-                    consectetur sed dolorem eius eligendi optio vitae porro
-                    omnis, quaerat impedit expedita doloribus?
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        {/* End of experience container */}
+        <About />
+        <Experience />
         <div className="contact-container" id="contact">
           <div className="upper-contact-container">Contact Me</div>
           <div className="lower-contact-container">
