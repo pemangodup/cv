@@ -20,9 +20,8 @@
 }
 .contact-form {
   background-color: #f4f6f8;
-  width: 50%;
+  width: 100%;
   padding: 20px;
-  height: 500px;
   margin-bottom: 100px;
 }
 label {
@@ -50,8 +49,13 @@ textarea {
   margin: 20px 0px 0px 5px;
   border-radius: 20px;
   border: 0px;
-  background-color: yellow;
+  background-color: rgb(243, 243, 44);
   cursor: pointer;
+  transition-duration: 1s;
+}
+.send-button:hover {
+  background-color: rgb(142, 142, 10);
+  color: white;
 }
 .contact-detail {
   background-color: white;
@@ -87,6 +91,7 @@ textarea {
   }
   .contact-form {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-detail {
