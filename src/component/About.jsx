@@ -1,15 +1,8 @@
 import img from '../img/pema.jpg';
 import './About.css';
 import { Slide } from 'react-awesome-reveal';
+import database from '../data/database';
 function About() {
-  const personDetails = [
-    { h: 'Age', e: '28' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
-    { h: 'Phone', e: '920090988' },
-    { h: 'Age', e: '28' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
-    { h: 'Phone', e: '920090988' },
-  ];
   return (
     <div className="about-container" id="about">
       <div className="about-container-detail">
@@ -23,7 +16,7 @@ function About() {
             quickly maximize timely deliverables for real-time schemas.
           </div>
           <div className="about-details">
-            {personDetails.map((deta) => {
+            {database.personDetails.map((deta) => {
               return (
                 <div className="straight-line">
                   <div className="label">{deta.h}:</div>
