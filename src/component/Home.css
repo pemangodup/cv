@@ -3,6 +3,7 @@
   background-color: pink;
   display: flex;
   margin: 0px;
+  padding-top: 100px;
 }
 .pic-container {
   width: 50%;
@@ -43,9 +44,11 @@
   font-size: 30px;
   margin: 20px 0px;
 }
+
 .icon {
   margin: 20px 20px 20px 0px;
 }
+
 .btn {
   height: 50px;
   width: 160px;

@@ -1,7 +1,8 @@
 /* - - - - - - - - - - - - - - - - - - - About Container - - - - - - - - - - - - - - - - - - -  */
 .about-container {
-  background-color: blue;
+  background-color: #f4f6f8;
   display: flex;
+  padding-top: 100px;
 }
 .about-container-detail {
   background-color: #f4f6f8;

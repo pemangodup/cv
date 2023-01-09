@@ -1,10 +1,10 @@
 import './App.css';
-import Heading from './heading/Heading';
-import Home from './heading/Home';
-import About from './heading/About';
-import Experience from './heading/Experience';
-import Contact from './heading/Contact';
-import Footer from './heading/Footer';
+import Heading from './Heading';
+import Home from './Home';
+import About from './About';
+import Experience from './Experience';
+import Contact from './Contact';
+import Footer from './Footer';
 
 const App = () => {
   return (
