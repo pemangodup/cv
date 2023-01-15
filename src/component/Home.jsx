@@ -1,6 +1,7 @@
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fade } from 'react-awesome-reveal';
+import { useEffect, useState } from 'react';
 import {
   faTwitter,
   faFacebook,
@@ -9,6 +10,20 @@ import {
   faBehance,
 } from '@fortawesome/free-brands-svg-icons';
 function Home() {
+  const [data, setData] = useState({});
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    try {
+      const response = await fetch('http://localhost:5000/v1/cv/api/home');
+      const data = await response.json();
+      setData(data.data[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div className="home-container" id="home">
       <div className="pic-container">
@@ -23,8 +38,8 @@ function Home() {
       <div className="sub-container">
         <Fade direction="up" cascade>
           <div className="hello-text">Hello!</div>
-          <div className="name-text">I,m Pema Ngodup</div>
-          <div className="profesion-text">Node JS & React JS Developer</div>
+          <div className="name-text">I,m {data.userName}</div>
+          <div className="profesion-text">{data.jobTitle}</div>
 
           <div>
             <a
@@ -63,10 +78,8 @@ function Home() {
               <FontAwesomeIcon className="icon" icon={faBehance} />
             </a>
           </div>
-
-          <button className="btn">
-            Get In Touch <FontAwesomeIcon icon="fa-regular fa-arrow-right" />
-          </button>
+          {['prefix', 'iconName']}
+          <button className="btn">Get In Touch</button>
         </Fade>
       </div>
     </div>

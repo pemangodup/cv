@@ -6,9 +6,9 @@ function Experience() {
     <div className="experiences-container" id="experience">
       <div className="top-part-experiences">Experiences</div>
       <div className="bottom-part-experiences">
-        {data.experiences.map((data) => {
+        {data.experiences.map((data, index) => {
           return (
-            <Slide direction="right">
+            <Slide direction="right" key={index}>
               <div className="card">
                 <div className="card-upper">
                   <div className="left-side-card-upper">
