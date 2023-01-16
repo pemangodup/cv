@@ -7,7 +7,6 @@ import {
   faFacebook,
   faInstagram,
   faLinkedin,
-  faBehance,
 } from '@fortawesome/free-brands-svg-icons';
 function Home() {
   const [data, setData] = useState({});
@@ -52,30 +51,23 @@ function Home() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+              href="https://twitter.com/PNgodup"
             >
               <FontAwesomeIcon className="icon" icon={faTwitter} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+              href="https://www.facebook.com/profile.php?id=100044281442343"
             >
               <FontAwesomeIcon className="icon" icon={faFacebook} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/pema-ngodup-529438130/"
+              href="https://www.instagram.com/"
             >
               <FontAwesomeIcon className="icon" icon={faInstagram} />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/pema-ngodup-529438130/"
-            >
-              <FontAwesomeIcon className="icon" icon={faBehance} />
             </a>
           </div>
           {['prefix', 'iconName']}

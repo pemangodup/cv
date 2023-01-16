@@ -1,11 +1,9 @@
 const database = {
   personDetails: [
-    { h: 'Age', e: '29' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
+    { h: 'Phone', e: '+351 920090988' },
+    { h: 'Degree', e: 'Bachelor' },
     { h: 'Phone', e: '920090988' },
-    { h: 'Age', e: '28' },
-    { h: 'Email', e: 'pngodup123@getDefaultNormalizer.com' },
-    { h: 'Phone', e: '920090988' },
+    { h: 'Email', e: 'pngodup123@gmail.com' },
   ],
   experiences: [
     {
