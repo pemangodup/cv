@@ -29,7 +29,11 @@ function Heading() {
               About
             </a>
           </li>
-
+          <li className="li">
+            <a href="#education" className="li">
+              Education
+            </a>
+          </li>
           <li className="li">
             <a href="#experience" className="li">
               Experiences

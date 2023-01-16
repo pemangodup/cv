@@ -5,7 +5,7 @@ import About from './About';
 import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
-
+import Education from './Education';
 const App = () => {
   return (
     <div className="main-container">
@@ -13,6 +13,7 @@ const App = () => {
       <section className="body-container">
         <Home />
         <About />
+        <Education />
         <Experience />
         <Contact />
       </section>

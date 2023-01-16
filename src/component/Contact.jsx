@@ -1,7 +1,17 @@
 import './Contact.css';
 import { Slide } from 'react-awesome-reveal';
+import { useEffect, useState } from 'react';
 
 function Contact() {
+  const [contact, setContact] = useState([]);
+  useEffect(() => {
+    fetchContact();
+  }, []);
+  async function fetchContact() {
+    const response = await fetch('http://localhost:5000/v1/cv/api/contact');
+    const contact = await response.json();
+    setContact(contact.data);
+  }
   return (
     <div className="contact-container" id="contact">
       <div className="upper-contact-container">Contact Me</div>
@@ -30,10 +40,14 @@ function Contact() {
               message using the contact form. Or get in touch using my email,
               skype or my contact number. See you!
             </div>
-            <div className="contact-sub-detail">
-              <div className="yeta">Email:</div>
-              <div className="uta">pngodup123@gmail.com</div>
-            </div>
+            {contact.map((data, index) => {
+              return (
+                <div key={index} className="contact-sub-detail">
+                  <div className="yeta">{contact[index].contactMedium}:</div>
+                  <div className="uta">{contact[index].contactId}</div>
+                </div>
+              );
+            })}
           </div>
         </Slide>
       </div>
