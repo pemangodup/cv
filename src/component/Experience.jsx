@@ -1,13 +1,16 @@
 import './Experience.css';
 import { Slide } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
+import variable from '../config/config';
+
 function Experience() {
   const [experience, setExperience] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
   async function fetchData() {
-    const response = await fetch('http://localhost:5000/v1/cv/api/experience');
+    const api = variable.API_URI;
+    const response = await fetch(`${api}/experience`);
     const data = await response.json();
     setExperience(data.data);
   }

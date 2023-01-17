@@ -1,6 +1,7 @@
 import './Contact.css';
 import { Slide } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
+import variable from '../config/config';
 
 function Contact() {
   const [contact, setContact] = useState([]);
@@ -8,7 +9,8 @@ function Contact() {
     fetchContact();
   }, []);
   async function fetchContact() {
-    const response = await fetch('http://localhost:5000/v1/cv/api/contact');
+    const api = variable.API_URI;
+    const response = await fetch(`${api}/contact`);
     const contact = await response.json();
     setContact(contact.data);
   }

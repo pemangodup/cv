@@ -2,6 +2,8 @@ import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fade } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
+import variable from '../config/config';
+
 import {
   faTwitter,
   faFacebook,
@@ -16,8 +18,10 @@ function Home() {
 
   async function fetchData() {
     try {
-      const response = await fetch('http://localhost:5000/v1/cv/api/home');
+      const api = variable.API_URI;
+      const response = await fetch(`${api}/home`);
       const data = await response.json();
+      console.log(data.data[0]);
       setData(data.data[0]);
     } catch (error) {
       console.log(error);

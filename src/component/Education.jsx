@@ -1,13 +1,15 @@
 import './Education.css';
 import { Slide } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
+import variable from '../config/config';
 function Education() {
   const [education, setEducation] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
   async function fetchData() {
-    const response = await fetch('http://localhost:5000/v1/cv/api/education');
+    const api = variable.API_URI;
+    const response = await fetch(`${api}/education`);
     const data = await response.json();
     setEducation(data.data);
   }
