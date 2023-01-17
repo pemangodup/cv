@@ -19,7 +19,10 @@ function Home() {
   async function fetchData() {
     try {
       const api = variable.API_URI;
-      const response = await fetch(`${api}/home`);
+      const response = await fetch(`${api}/home`, {
+        method: 'GET',
+        mode: 'no-cors',
+      });
       const data = await response.json();
       console.log(data.data[0]);
       setData(data.data[0]);
