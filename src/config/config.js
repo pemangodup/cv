@@ -1,4 +1,4 @@
 const variables = {
-  API_URI: 'https://shy-lime-woodpecker-veil.cyclic.app/v1/cv/api',
+  API_URI: 'https://calm-lime-deer-coat.cyclic.app/v1/cv/api',
 };
 export default variables;
