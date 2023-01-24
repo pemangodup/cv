@@ -6,6 +6,7 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 import Education from './Education';
+
 const App = () => {
   return (
     <div className="main-container">

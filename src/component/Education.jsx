@@ -1,10 +1,11 @@
-import './Education.css';
-import { Slide } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
+import './Education.css';
 import variable from '../config/config';
-function Education() {
+
+function Try() {
   const [education, setEducation] = useState([]);
-  useEffect(() => {
+
+  useEffect((state) => {
     fetchData();
   }, []);
   async function fetchData() {
@@ -13,35 +14,35 @@ function Education() {
     const data = await response.json();
     setEducation(data.data);
   }
+
   return (
-    <div className="education-container" id="education">
-      <div className="top-part-education">Education</div>
-      <div className="bottom-part-education">
-        {education.map((data, index) => {
-          return (
-            <Slide direction="left" key={index}>
-              <div className="card-education">
-                <div className="card-upper-education">
-                  <div className="left-side-card-upper-education">
-                    <div className="sub">{data.degree} </div>
-                    <div className="company-date">{data.institute}</div>
+    <div id="education">
+      <div className="education-title">Education</div>
+      <div className="education-main-container">
+        <div className="card-container">
+          <div className="education-card-content">
+            {education.map((data, index) => {
+              return (
+                <div key={index} className="card-education">
+                  <div className="card-top">
+                    <div className="degree">{data.degree}</div>
+                    <div className="institute">{data.institute}</div>
+                  </div>
+                  <div className="card-bottom">
+                    <div className="edu-addess">{data.address}</div>
+                    <div className="organizationLink">
+                      <a href={data.website} target="_blank" rel="noreferrer">
+                        Website
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div className="card-below-education">
-                  <div className="educationDegree">{data.address}</div>
-                  <div className="organizationLink">
-                    Website:{' '}
-                    <a href={data.website} target="_blank" rel="noreferrer">
-                      {data.website}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </Slide>
-          );
-        })}
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-export default Education;
+export default Try;

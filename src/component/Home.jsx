@@ -2,7 +2,7 @@ import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fade } from 'react-awesome-reveal';
 import { useEffect, useState } from 'react';
-// import variable from '../config/config';
+import variable from '../config/config';
 
 import {
   faTwitter,
@@ -18,14 +18,9 @@ function Home() {
 
   async function fetchData() {
     try {
-      // const api = variable.API_URI;
-      // const response = await fetch(`${api}/home`);
-      const response = await fetch(
-        'https://colorful-hare-cape.cyclic.app/v1/cv/api/home'
-      );
-
+      const api = variable.API_URI;
+      const response = await fetch(`${api}/home`);
       const data = await response.json();
-      console.log(data.data[0]);
       setData(data.data[0]);
     } catch (error) {
       console.log(error);
