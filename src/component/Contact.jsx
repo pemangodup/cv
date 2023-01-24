@@ -38,9 +38,8 @@ function Contact() {
           <div className="contact-detail">
             <div className="contact-sub">Let's talk how I can help you!</div>
             <div className="contact-message">
-              If you like my work and want to avail my services then drop me a
-              message using the contact form. Or get in touch using my email,
-              skype or my contact number. See you!
+              If you have any queries. Feel free to contact me in the given
+              email address/phone no or can send mail through above given form.
             </div>
             {contact.map((data, index) => {
               return (
