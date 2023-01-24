@@ -2,8 +2,11 @@ const database = {
   personDetails: [
     { h: 'Phone', e: '+351 920090988' },
     { h: 'Degree', e: 'Bachelor' },
-    { h: 'Phone', e: '920090988' },
     { h: 'Email', e: 'pngodup123@gmail.com' },
+    {
+      h: 'Address',
+      e: 'R. Frei Fortunato de São Boaventura 3, Lisbon, Portugal',
+    },
   ],
   experiences: [
     {
