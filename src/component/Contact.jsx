@@ -6,6 +6,7 @@ import { useRef } from 'react';
 
 function Contact() {
   const [contact, setContact] = useState([]);
+  const [sentmessage, setSentmessage] = useState('');
   let name = useRef('');
   let email = useRef('');
   let message = useRef('');
@@ -31,9 +32,12 @@ function Contact() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(postData),
     });
+    const response = await res.json();
     if (!res.ok) {
-      const message = `An error occured: ${res.status} - ${res.statusText}`;
-      throw new Error(message);
+      setSentmessage(response.data.message);
+    }
+    if (res.ok) {
+      setSentmessage(response.data.message);
     }
   }
   return (
@@ -79,6 +83,11 @@ function Contact() {
             <button type="submit" className="send-button">
               Send
             </button>
+
+            <label>
+              {' '}
+              <h4>{sentmessage}</h4>
+            </label>
           </form>
         </Slide>
       </div>
