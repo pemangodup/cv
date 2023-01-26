@@ -40,8 +40,8 @@ function Contact() {
     <div className="contact-container" id="contact">
       <div className="upper-contact-container">Contact Me</div>
       <div className="lower-contact-container">
-        <Slide direction="left">
-          <div className="contact-detail">
+        <Slide direction="left" className="contact-detail">
+          <div>
             <div className="contact-sub">Let's talk how I can help you!</div>
             <div className="contact-message">
               If you have any queries. Feel free to contact me in the given

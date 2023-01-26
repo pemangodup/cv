@@ -1,7 +1,7 @@
 const database = {
   personDetails: [
     { h: 'Phone', e: '+351 920090988' },
-    { h: 'Degree', e: 'Bachelor' },
+    { h: 'Degree', e: 'B. Sc. Hons Computer Science' },
     { h: 'Email', e: 'pngodup123@gmail.com' },
     {
       h: 'Address',

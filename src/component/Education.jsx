@@ -16,7 +16,7 @@ function Try() {
   }
 
   return (
-    <div id="education">
+    <div id="education" className="main-education">
       <div className="education-title">Education</div>
       <div className="education-main-container">
         <div className="card-container">
